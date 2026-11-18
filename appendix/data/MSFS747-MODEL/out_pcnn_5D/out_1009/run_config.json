@@ -1,0 +1,21 @@
+{
+  "split_seed": 1234,
+  "initialization_seed": 1009,
+  "layers": [
+    5,
+    64,
+    64,
+    64,
+    1
+  ],
+  "learning_rate": 0.001,
+  "max_epochs": 5000,
+  "early_stop_total_loss": 0.01,
+  "batch_size": 2110,
+  "checkpoint_selection": "at_termination",
+  "lambda_mach_left": 0.01,
+  "lambda_mach_left_second": 0.01,
+  "mach_left_samples": 20,
+  "mach_derivative_min": 1e-10,
+  "mach_second_derivative_max": 0.0
+}

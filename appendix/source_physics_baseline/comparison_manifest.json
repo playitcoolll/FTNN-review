@@ -1,0 +1,17 @@
+{
+  "selected_learning_rates": {
+    "FTNN": 0.001,
+    "DNN": 0.0001,
+    "RCNN": 0.01,
+    "MFDNN": 0.005,
+    "LC": null
+  },
+  "selection_dataset_points": 600,
+  "comparison_mask": "source trim success and finite source/target Ps",
+  "source_model_repetitions": 1,
+  "learned_model_repetitions": 10,
+  "target_labels": "same original decimal target reference values for all methods",
+  "reused_lhs_source_file": "data/inputfile/lhs_source/LHS_source_trim_Ps_20261028_220952_794.xlsx",
+  "reused_lhs_sha256": "511cf156cc2f93d57d8db275811ed6e4c5c0315447ebdfe22d24bd921ae65728",
+  "trajectory_results_sha256": "764c586d8c8143ae6c6767b65bd98fac10d7e8b7b97a3904471cbdf4ea19350d"
+}

@@ -1,0 +1,37 @@
+\begin{table}[width=\linewidth,cols=4,pos=htbp]
+\caption{Prediction errors of the source model and five comparison methods at the selected learning rates. Values for FTNN, DNN, RCNN, MFDNN, and LC are mean $\pm$ sample standard deviation over ten runs.}
+\label{tab:selected-model-comparison}
+\small
+\begin{tabular*}{\tblwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+Method & Learning rate & RMSE (m/s) & MAE (m/s) \\
+\midrule
+\multicolumn{4}{l}{Held-out trajectory points} \\
+Source model & -- & $25.1721$ & $23.9068$ \\
+FTNN & $0.001$ & $0.1339\pm0.0132$ & $0.0868\pm0.0090$ \\
+DNN & $0.0001$ & $0.5019\pm0.0420$ & $0.2617\pm0.0188$ \\
+RCNN & $0.01$ & $8.0085\pm0.0251$ & $6.6769\pm0.0210$ \\
+MFDNN & $0.005$ & $0.2512\pm0.0953$ & $0.1608\pm0.0897$ \\
+LC & -- & $3.1549\pm0.0056$ & $2.6210\pm0.0068$ \\
+\midrule
+\multicolumn{4}{l}{Pooled unseen trajectories} \\
+Source model & -- & $21.2771$ & $20.8819$ \\
+FTNN & $0.001$ & $0.3733\pm0.0562$ & $0.2809\pm0.0542$ \\
+DNN & $0.0001$ & $0.5079\pm0.0061$ & $0.4020\pm0.0135$ \\
+RCNN & $0.01$ & $5.5819\pm0.0192$ & $4.9726\pm0.0198$ \\
+MFDNN & $0.005$ & $0.3681\pm0.1327$ & $0.2733\pm0.1313$ \\
+LC & -- & $2.9644\pm0.0078$ & $2.6234\pm0.0080$ \\
+\midrule
+\multicolumn{4}{l}{Target-domain LHS validation set} \\
+Source model & -- & $25.8146$ & $24.7325$ \\
+FTNN & $0.001$ & $3.2564\pm0.5342$ & $2.3443\pm0.4063$ \\
+DNN & $0.0001$ & $5.9198\pm0.2139$ & $4.4548\pm0.1928$ \\
+RCNN & $0.01$ & $7.8157\pm0.4373$ & $6.2932\pm0.1626$ \\
+MFDNN & $0.005$ & $6.9287\pm3.3198$ & $5.5772\pm3.0918$ \\
+LC & -- & $5.4580\pm0.0145$ & $3.9714\pm0.0099$ \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\footnotesize
+Source model denotes the uncorrected source dynamics model, whose deterministic errors are reported without standard deviations. Trajectory errors use the original trajectory labels; LHS errors use target-model trim labels. The five comparison methods are evaluated on the full evaluation sets; only source-model errors exclude points with unsuccessful trim solutions. Learning rates are selected using the full LHS validation set. Unseen-trajectory errors are pooled per run before averaging across runs. Sample standard deviations use $\mathrm{ddof}=1$.
+\end{table}

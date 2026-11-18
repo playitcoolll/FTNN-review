@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# MATLAB / Simulink build caches
+slprj/
+*.slxc
+
+# Generated training and evaluation outputs
+results_*/
+heldout_tracks_4_15/
+evaluation_overview/

@@ -1,0 +1,37 @@
+\begin{table}[width=\linewidth,cols=4,pos=htbp]
+\caption{Prediction errors on common valid operating points following LHS-based learning-rate selection. Results for FTNN, DNN, RCNN, MFDNN, and LC are mean $\pm$ sample standard deviation over ten runs.}
+\label{tab:selected-model-comparison}
+\small
+\begin{tabular*}{\tblwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+Method & Learning rate & RMSE (m/s) & MAE (m/s) \\
+\midrule
+\multicolumn{4}{l}{Held-out trajectory points ($n=97$ of 100)} \\
+Source physics & -- & $25.1721$ & $23.9068$ \\
+FTNN & $0.001$ & $0.1350\pm0.0132$ & $0.0870\pm0.0090$ \\
+DNN & $0.0001$ & $0.5079\pm0.0427$ & $0.2631\pm0.0193$ \\
+RCNN & $0.01$ & $8.0571\pm0.0252$ & $6.6906\pm0.0216$ \\
+MFDNN & $0.005$ & $0.2541\pm0.0964$ & $0.1625\pm0.0908$ \\
+LC & -- & $3.1265\pm0.0052$ & $2.5797\pm0.0067$ \\
+\midrule
+\multicolumn{4}{l}{Pooled unseen trajectories: $4^\circ$ and $15^\circ$ ($n=400$ of 400)} \\
+Source physics & -- & $21.2771$ & $20.8819$ \\
+FTNN & $0.001$ & $0.3733\pm0.0562$ & $0.2809\pm0.0542$ \\
+DNN & $0.0001$ & $0.5079\pm0.0061$ & $0.4020\pm0.0135$ \\
+RCNN & $0.01$ & $5.5819\pm0.0192$ & $4.9726\pm0.0198$ \\
+MFDNN & $0.005$ & $0.3681\pm0.1327$ & $0.2733\pm0.1313$ \\
+LC & -- & $2.9644\pm0.0078$ & $2.6234\pm0.0080$ \\
+\midrule
+\multicolumn{4}{l}{Target-domain LHS validation subset ($n=566$ of 600)} \\
+Source physics & -- & $25.8146$ & $24.7325$ \\
+FTNN & $0.001$ & $2.7353\pm0.4255$ & $2.0523\pm0.3485$ \\
+DNN & $0.0001$ & $5.1377\pm0.1919$ & $3.9931\pm0.1789$ \\
+RCNN & $0.01$ & $7.9838\pm0.4540$ & $6.4528\pm0.1727$ \\
+MFDNN & $0.005$ & $6.2801\pm3.4544$ & $5.1843\pm3.0825$ \\
+LC & -- & $5.1595\pm0.0164$ & $3.7092\pm0.0107$ \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\footnotesize
+Only points with valid source-model trim solutions are included; identical point masks are applied to all methods. Counts show valid/candidate points. Source physics denotes the deterministic, uncorrected source simulation model. Learning rates remain those selected on the original 600-point target LHS set. Unseen-trajectory errors are pooled per run before averaging; SD uses $\mathrm{ddof}=1$.
+\end{table}
